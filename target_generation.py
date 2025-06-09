@@ -134,7 +134,7 @@ def spline_5deg_lookup(grid_data, zenith=0, sensor=120, ground=0, water=0, conc=
     return lookup.squeeze()
 
 def load_ghg_dataset(ghg_hdf):
-    datafile = h5py.File(ghg_hdf, 'r', rdcc_nbytes=4194304)
+    datafile = h5py.File("/content/dataset_ch4_full.hdf5", 'r', rdcc_nbytes=4194304)
     return datafile['modtran_data'], datafile['modtran_param'], datafile['wave']
 
 def load_pca_dataset():
